@@ -79,7 +79,7 @@ Its purpose was to serve as a final project for my ITC 2060 Human Computer Inter
 
 ### Saved
 - The process for the saved pets page is pretty simple:
-  - Instead of grabbing information from the database, the JS code uses the "liked pets" session storage table that is created upon login (further explained [here](https://github.com/FlourTM/Best-Pets#loginregister))
+  - Instead of grabbing information from the database, the JS code uses the "liked pets" session storage table that is created upon login (further explained [here](https://github.com/FlourTM/Best-Pets-Final#loginregister))
   - The JS code iterates through the session storage table and sends it to the server via POST method
   - Once the server receives the table, it iterates through the table, iterates through the database, and creates cards for each pet saved on the table
 
