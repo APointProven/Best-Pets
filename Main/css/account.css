@@ -1,0 +1,296 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow';
+    background-color: #faeedf;
+}
+
+/**************************/
+/* Login & Register Forms */
+/**************************/
+.error-message {                        /* Details for error/confirmation message */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    margin-bottom: -150px;
+    padding-bottom: 20px;
+    font-size: 23px;
+    text-align: center;
+    color:red;
+}
+
+.LR-forms {                             /* Login and Register Form details */
+    position: absolute;
+    z-index: -1;
+    width: 380px;
+    height: 490px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 150px;
+    background: #fff;
+    border-radius: 1vh;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.LR-forms .button-box {                   /* Sign-in/Sign-up header button details*/
+    position: relative;
+    width: 220px;
+    margin: 35px auto;
+    background-color: #47a1bb;
+    box-shadow: 0 0 20px 9px #0c354e1f;
+    border-radius: 30px;
+}
+
+.LR-forms .toggle-btn {                   /* Sign-in/Sign-up header button text */
+    position: relative;
+    padding: 10px 23px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    background: transparent;
+    border: 0;
+    outline: none;
+}
+
+.LR-forms #btn {                          /* Sign-in/Sign-up active button details */
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: #0c354e;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.LR-forms .input-group {                  /* Form field placement */
+    top: 130px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.LR-forms i {                           /* Icon appearance details */
+    position: relative;
+    color: #0c354e;
+    font-size: 23px;
+    transition: all 0.2s ease;
+    margin: 0;
+}
+
+.LR-forms i.email {                     /* Email icon placement */
+    right: 35px;
+    top: 40px;
+}
+
+.LR-forms i.pass {                      /* Password Lock placement */
+    right: 35px;
+    top: 40px;
+}
+
+.LR-forms #login i.showHidePw{         /* Show/Hide Password on Login form */
+    float: right;
+    cursor: pointer;
+    top: 40px;
+    padding-right: 10px;
+    margin-bottom: -25px;
+}
+
+.LR-forms #register i.showHidePw{       /* Show/Hide Password on Register form */
+    float: right;
+    cursor: pointer;
+    top: 12px;
+    padding-right: 10px;
+    margin-bottom: -25px;
+}
+
+.LR-forms .input-field {                /* Form input lines */
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border: 0;
+    border-bottom: 1px solid #0c354e;
+    outline: none;
+    background: transparent;
+}
+
+.LR-forms .submit-btn {                 /* Submit button box and text */
+    width: 95%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    color: #fff;
+    font-size: 15px;
+    background: #0c354e;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    transition: all ease-in-out 250ms;
+}
+
+.LR-forms .submit-btn:hover {
+    background-color: #47a1bb;
+    transform: scale(1.03);
+
+    transition: all ease-in-out 250ms;
+}
+
+.LR-forms .check-box {                  /* Checkboxes */
+    margin: 30px 10px 30px 0;
+}
+
+#login {                                /* Starting location of Login form */
+    left: 50px;
+}
+
+#register {                             /* Starting location of Register form */
+    left: 450px;
+}
+
+/****************/
+/* Account Form */
+/****************/
+.confirm-message {                      /* Confirmation and error message*/ 
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    margin-bottom: -150px;
+    padding-bottom: 20px;
+    font-size: 23px;
+    text-align: center;
+    color:red;
+}
+
+.account-form {                         /* Account Form details */
+    width: 50vw;
+    min-width: 450px;
+    height: fit-content;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: -150px;
+    text-align: center;
+    background: #fff;
+    border-radius: 1vh;
+    padding-top: 2vh;
+    overflow-x: hidden;
+}
+
+.account-form h1 {                      /* My Account header */
+    font-size: 23px;
+    width: 55%;
+    margin: 1vh auto;  
+    color: #fff;
+    background-color: #0c354e;
+    box-shadow: 0 0 20px 9px #0c354e1f;
+    border-radius: 30px;
+    padding: 2vh;
+}
+
+.account-form h3 {                      /* Name, email, pw, tel headers */
+    text-align: left;
+    padding-top: 3vh;
+    padding-left: 2.5vw;
+}
+
+.account-form i {                       /* Icon appearance details */
+    position: relative;
+    float: right;
+    color: #0c354e;
+    font-size: 23px;
+    transition: all 0.2s ease;
+    margin-right: 3vw;
+    margin-left: -5vw;
+    margin-top: 13px;
+    cursor: pointer;
+}
+
+.account-form .input1 {                 /* Information details line */
+    width: 90%;
+    padding: 2vh 0;
+    margin: 1vh 0;
+    border: 0;
+    border-bottom: 1px solid #0c354e;
+    outline: none;
+    background: transparent;
+}
+
+.account-form .input2 {                 /* Information details line */
+    width: 90%;
+    padding: 2vh 0;
+    margin: 1vh 0;
+    border: 0;
+    border-bottom: 1px solid #0c354e;
+    outline: none;
+    background: transparent;
+}
+
+.account-form .notYou {                 /* Logout button "Not you?" text */
+    display: inline-block;
+    padding-top: 5px;
+    font-size: 17px;
+}
+
+.account-form .logout {                 /* Logout button "Sign out now." details */
+    display: inline-block;
+    font-size: 17px;
+    cursor: pointer;
+    border: 0;
+    color: #47a1bb;
+    background-color: transparent;
+}
+
+.account-form .logout:hover {
+    text-decoration: underline;
+}
+
+.account-form #edit-btn {               /* Edit button box and text */
+    display: inline-block;
+    width: 30%;
+    padding: 10px;
+    margin: 30px;
+    
+    cursor: pointer;
+    border: 0;
+    color: #fff;
+    font-size: 17px;
+    background: #0c354e;
+    box-shadow: 0 0 20px 9px #0c354e1f;
+    border-radius: 30px;
+    transition: all ease-in-out 250ms;
+}
+
+.account-form #edit-btn:hover {
+    background-color: #47a1bb;
+    transform: scale(1.03);
+
+    transition: all ease-in-out 250ms;
+}
+
+.account-form #pass-btn {               /* Change Password button box and text */
+    display: inline-block;
+    width: 30%;
+    padding: 10px;
+    margin: 30px;
+    cursor: pointer;
+    border: 0;
+    color: #fff;
+    font-size: 17px;
+    background: #0c354e;
+    box-shadow: 0 0 20px 9px #0c354e1f;
+    border-radius: 30px;
+    transition: all ease-in-out 250ms;
+}
+
+.account-form #pass-btn:hover {
+    background-color: #47a1bb;
+    transform: scale(1.03);
+
+    transition: all ease-in-out 250ms;
+}

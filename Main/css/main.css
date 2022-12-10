@@ -1,0 +1,580 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow);
+
+body {
+    margin: 0;
+    font-family: 'Barlow';
+    background: #faeedf;
+}
+
+/***********************/
+/* Mission Statement & */
+/* Bottom of My Saved  */
+/***********************/
+footer {                    /* Position/Placement details */
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    font-size: 26px;
+    line-height: 40px;
+    padding: 100px;
+}
+
+footer h1 {                 /* Header title details */
+    color:#0c354e;
+}
+
+footer p {                  /* Paragraph text details */
+    color:#fff;
+    background: #0c354e;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+/*************/
+/* Pet Cards */
+/*************/
+.all-cards h1 {             /* Home page header titles (Newest, Oldest, Adopted */
+    display: block;
+    text-align: center;
+    color:#fff;
+    background: #0c354e;
+    margin: 50px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.text h3{                   /* Pet cards Name details */
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.65rem;
+    line-height: 15px;
+    margin-left: 15px;
+}
+
+.text p {                   /* Pet cards Age, Breed details */
+    color: #0c354e;
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 15px;
+    margin-left: 15px;
+}
+
+.grid{                      /* Pet cards grid format */
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    margin: 40px;
+}
+
+.grid article{              /* Pet cards blue box and text details */
+    background: #47a1bb;
+    border: none;
+    border-radius: 1vw;
+    text-align: left;
+    width: 325px;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+}
+
+.grid article img{          /* Pet cards image details */
+    background-color: #0c354e;
+    padding: .01vh;
+    border-radius: 1vw;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 12.5px solid #0c354e;
+    width: 300px;
+    height: 300px;
+}
+
+#item #save {          /* Save button */
+    display: inline;
+    float: right;
+    margin: 5px;
+    margin-top: 8px;
+    font-size: 45px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    transition: all ease-in-out 250ms;
+}
+
+#item #save:hover {
+    transform: scale(1.03);
+    transition: all ease-in-out 250ms;
+}
+
+.adopted-text {         /* Adopted text details */
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: -60px;
+    top: -65.5px;
+    width: 300px;
+    height: 50px;
+    font-size: 40px;
+    background: linear-gradient(to bottom, #00000062, #000000d0);
+    color: white;
+}
+
+/*******************/
+/* Single Pet Page */
+/*******************/
+.image-info img {               /* Pet image */
+    background-color: #0c354e;
+    padding: .01vh;
+    border-radius: 1vh;
+    border: 2vh solid #0c354e;
+    margin-top: -120px;
+    width: 250px;
+}
+
+.info-box {                     /* Pet blue box */
+    color:#fff;
+    background-color: #47a1bb;
+    margin: 0 auto;
+    margin-top: 120px;
+    width: 94vw;
+    height: fit-content;
+    padding-top: 40px;
+    padding-bottom: 1vh;
+    border-radius: 1vh;
+    border: 2vh;
+}
+
+.image-info h2 {                /* Name of pet */
+    text-align: left;
+    margin-top: -100px;
+    margin-left: 300px;
+    font-size: 38px;
+}
+
+.image-info h3 {                /* Age & breed of pet */
+    text-align: left;
+    margin-top: -20px;
+    margin-left: 300px;
+    font-size: 28px;
+}
+
+.about-name {                   /* About "pet name" */
+    text-align: left;
+    padding-top: 20px;
+    margin-left: 65px;
+    font-size: 28px;
+}
+
+.info-box p {                   /* Pet description */
+    margin-left: 65px;
+    margin-right: 65px;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+/**********************************/
+/* Single Pet Page Bottom Portion */
+/**********************************/
+.bottom-portion {               /* Bottom blue box */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    color: #fff;
+    background-color: #0c354e;
+    margin: 0 auto;
+    width: 94vw;
+    height:fit-content;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 1vh;
+    border: 2vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.saved-message {                /* Confirmation and error message*/ 
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 10px;
+    font-size: 30px;
+    text-align: center;
+    color:red;
+}
+
+.interested {                   /* Placement of Interested? and Save Icon */
+    display: grid;
+    margin-top: -20px;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    width: fit-content;
+    text-align: center;
+    padding: 20px;
+}
+
+.interested h2 {                /* Interested? title info */
+    font-size: 38px;
+}
+
+.interested p {                 /* Interested paragraph info */
+    margin: 0px;
+    font-size: 25px;
+}
+
+.req-box {                      /* Requirements box info */
+    display: grid;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    background: #47a1bb;
+    border-radius: 1vh;
+    padding: 20px;
+}
+
+.req-box h2 {                   /* Requirements title */
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 38px;
+}
+
+.req-box ul {                   /* Requirements list */
+    margin-left: -25px;
+    list-style: circle;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.bottom-portion .btn {          /* Save button */
+    font-size: 35px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 15px;
+    padding-bottom: 0;
+    color: #fff;
+    background-color: #47a1bb;
+    border-radius: 1vh;
+    transition: all ease-in-out 250ms;
+}
+
+.bottom-portion .btn:hover {
+    transform: scale(1.03);
+    transition: all ease-in-out 250ms;
+}
+
+.save-text {                    /* Save button text */
+    margin: 0px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+/********************/
+/* Calculator Title */
+/********************/
+.calc-desc {                /* Calculator description box details */
+    position: relative;
+    z-index: -1;
+    font-size: 20px;
+    width: fit-content;
+    max-width: 70%;
+    height: fit-content;
+    margin: 3% auto;
+    text-align: center;
+    color: #fff;
+    background: #47a1bb;
+    border-radius: 10px;
+    padding: 5px;
+    padding-top: 20px;
+}
+
+.calc-desc h1 {             /* Calculator title header details */
+    position: relative;
+    z-index: -1;
+    font-size: 23px;
+    width: 55%;
+    max-width: 450px;
+    margin: 5px auto;
+    position: relative;
+    background-color: #0c354e;
+    box-shadow: 0 0 20px 9px #0c354e1f;
+    border-radius: 30px;
+    padding: 15px;
+}
+
+/********************/
+/* Calculator Forms */
+/********************/
+.calc-box {                 /* Calculator Form details */
+    width: 700px;
+    height: 90vh;
+    position: relative;
+    margin: 3% auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all ease-in-out 150ms;
+}
+
+.calc-btn-box {             /* Dogs/Cats header button details*/
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    background-color: #47a1bb;
+    box-shadow: 0 0 20px 9px #0c354e1f;
+    border-radius: 30px;
+}
+
+.calc-toggle-btn {          /* Dogs/Cats header button text */
+    padding: 10px 32px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 19px;
+    font-weight:600;
+    background: transparent;
+    border: 0;
+    outline: none;
+    text-align: center;
+    position: relative;
+}
+
+.calc-box #btn {            /* Dogs/Cats active button details */
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: #0c354e;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.calc-box .input-group {    /* Form field placement */
+    top: 110px;
+    position: absolute;
+    width: 450px;
+    padding-bottom: 30px;
+    transition: .5s;
+}
+
+.calc-box .input-group h3 { /* Form input headers */
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 25px;
+}
+
+.calc-box .input-field {    /* Form input lines */
+    font-size: 15px;
+    width: 100%;
+    padding: 7px 0;
+    border: 0;
+    border-bottom: 1px solid #0c354e;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.calc-box .submit-btn {     /* Submit button box and text */
+    float: left;
+    width: 40%;
+    padding: 10px;
+    margin-top: 35px;
+    cursor: pointer;
+    border: 0;
+    color: #fff;
+    font-size: 17px;
+    background: #0c354e;
+    box-shadow: 0 0 20px 9px #0c354e1f;
+    border-radius: 30px;
+    transition: all ease-in-out 250ms;
+}
+
+.calc-box .submit-btn:hover {
+    background-color: #47a1bb;
+    transform: scale(1.03);
+
+    transition: all ease-in-out 250ms;
+}
+
+.calc-box .reset-btn {      /* Reset button box and text */
+    float: right;
+    width: 40%;
+    padding: 10px;
+    margin-top: 35px;
+    cursor: pointer;
+    border: 0;
+    color: #fff;
+    font-size: 17px;
+    background: #0c354e;
+    box-shadow: 0 0 20px 9px #0c354e1f;
+    border-radius: 30px;
+    transition: all ease-in-out 250ms; 
+}
+
+.calc-box .reset-btn:hover {
+    background-color: #47a1bb;
+    transform: scale(1.03);
+
+    transition: all ease-in-out 250ms;
+}
+
+#dogs {                     /* Starting location of Dogs form */
+    left: 125px;
+}
+
+#cats {                     /* Starting location of Cats form */
+    left: 800px;
+}
+
+.calc-error-msg {              /* Error message*/ 
+    text-align: center;
+    margin-top: -30px;
+    margin-bottom: -80px;
+    font-size: 23px;
+    color:red;
+}
+
+@media (max-width: 1000px) {    /* Resizing for when screen is too small */
+    .calc-box{
+        width: 380px;
+    }
+
+    .calc-box .input-group{
+        width: 280px;
+    }
+    
+    #dogs {
+        left:50px;
+    }
+    #cats {
+        left: 500px;
+    }
+
+}
+
+/**********************/
+/* Calculator Results */
+/**********************/
+.calc-answers {                 /* Estimated Results box details */
+    font-size: 20px;
+    width: fit-content;
+    max-width: 90%;
+    height: fit-content;
+    margin: 3% auto;
+    margin-top: 120px;
+    text-align: center;
+    color: #fff;
+    background: #47a1bb;
+    border-radius: 10px;
+    padding: 5px; 
+}
+
+.calc-answers h1 {              /* Estimated Results header details */
+    font-size: 23px;
+    width: 55%;
+    max-width: 450px;
+    margin: 5px auto;
+    position: relative;
+    background-color: #0c354e;
+    box-shadow: 0 0 20px 9px #0c354e1f;
+    border-radius: 30px;
+    padding: 15px;
+}
+
+.calc-answers h3 {              /* Monthly and Annual totals headers */
+    display: inline-block;
+}
+
+.calc-answers h4 {
+    display: inline-block;
+    font-size: 23px;
+    width: 200px;
+    border: 0;
+    border-bottom: 2px solid #0c354e;
+    outline: none;
+    background: transparent;
+}
+
+.calc-answers p {               /* Monthly and Annual totals paragraph */
+    margin-top: -20px;
+    padding: 15px;
+}
+
+/*****************/
+/* Feedback Page */
+/*****************/
+.confirm-message {              /* Confirmation and error message*/ 
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    margin-bottom: -150px;
+    padding-bottom: 20px;
+    font-size: 23px;
+    text-align: center;
+    color:red;
+}
+
+.feedback-form {                /* Feedback Form details */
+    width: 50vw;
+    min-width: 450px;
+    height: fit-content;
+    margin: 3% auto;
+    margin-top: 150px;
+    text-align: center;
+    background: #fff;
+    border-radius: 1vh;
+    padding-top: 2vh;
+    overflow-x: hidden;
+}
+
+.feedback-form h1 {             /*Feedback header */
+    font-size: 23px;
+    width: 55%;
+    margin: 1vh auto;  
+    color: #fff;
+    background-color: #0c354e;
+    box-shadow: 0 0 20px 9px #0c354e1f;
+    border-radius: 30px;
+    padding: 2vh;
+}
+
+.feedback-form h3 {             /* Name, email, and content headers */
+    text-align: left;
+    padding-top: 3vh;
+    padding-left: 2.5vw;
+}
+
+.feedback-form .input1 {        /* Information details line */
+    width: 90%;
+    padding: 2vh 0;
+    margin: 1vh 0;
+    border: 0;
+    border-bottom: 1px solid #0c354e;
+    outline: none;
+    background: transparent;
+    overflow-x: hidden;
+    word-wrap: normal;
+}
+
+.feedback-form #feedback-btn {      /* Submit button box and text */
+    display: inline-block;
+    width: 30%;
+    padding: 10px;
+    margin: 30px;
+    cursor: pointer;
+    border: 0;
+    color: #fff;
+    font-size: 17px;
+    background: #0c354e;
+    box-shadow: 0 0 20px 9px #0c354e1f;
+    border-radius: 30px;
+    transition: all ease-in-out 250ms;
+}
+
+.feedback-form #feedback-btn:hover {
+    background-color: #47a1bb;
+    transform: scale(1.03);
+
+    transition: all ease-in-out 250ms;
+}

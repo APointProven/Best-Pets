@@ -1,0 +1,197 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow);
+
+/******************/
+/* Navigation Bar */
+/******************/
+*{
+    font-family: 'Barlow';
+}
+
+.navbar {                   /* Controls the navigation bar */
+    background-color: #0c354e;
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar button {
+    border:none;
+}
+.nav-item {
+    color: #fff;
+    font-size: 1.6rem;  
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    color:#84c8db;
+}
+
+button.active {
+    color: #47a1bb;
+}
+
+/*************************/
+/* Logo and Person Icons */
+/*************************/
+.logo {                     /* Details for the logo */
+    cursor: pointer;
+    width: 225px;
+    padding-left: 30px;
+}
+
+#person-Btn {               /* Details for the person button */
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.person-icon {              /* Details for the person icon */
+    cursor: pointer;
+    width: 50px;
+    padding-right: 30px;
+}
+
+/********************/
+/* Middle Nav Links */
+/********************/
+.navLinks {
+    margin-left: -13.5vw;
+}
+
+.navLinks button {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+    background: none;
+}
+
+.navLinks button::before {
+    content: "";
+    position: absolute;
+    width: 84%;
+    height: 4px;
+    bottom: 3px;
+    left: 8%;
+    background-color: #84c8db;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navLinks button:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.navLinks button.active::before {
+    content: "";
+    position: absolute;
+    width: 84%;
+    height: 4px;
+    bottom: 3px;
+    left: 8%;
+    background-color: #47a1bb;
+    visibility: visible;
+    transform: scaleX(1);
+    transition: all 0.3s ease-in-out 0s; 
+}
+
+/*******************/
+/* Person Nav Info */
+/*******************/
+.person-nav {              /* Details on the person navigation buttons */
+    position: absolute;
+    z-index: 1;
+    right: 0em;
+    width: 120px;
+    margin-top: 0px;
+    padding: 20px;
+    background-color: #092a3f;
+    border-bottom-left-radius: 10px;
+    list-style: none; 
+}
+
+.person-nav button {         /* Details on the person navigation buttons */
+    background-color: transparent;
+    border: none;
+    font-size: 1.4rem;
+    line-height: 30px;
+}
+
+@media (min-width: 1251px){     /* If screen gets too big, burger menu will disappear */
+    .burger-nav {
+        display: none;
+    }
+}
+
+/************************************/
+/* Burger Menu                      */
+/* When the screen gets too narrow, */
+/* it will switch to a burger menu. */
+/************************************/
+@media (max-width: 1250px){
+    .navLinks, .person-icon, .person-nav {        /* Hides the center navigation links, person icon, and person menu */
+        display: none;
+    }
+    
+    #burger-btn {           /* Details for the burger menu button */
+        display: inline-block;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding-right: 30px;
+    }
+      
+    .bar1, .bar2, .bar3 {   /* Displays the bars to create the burger menu */
+        width: 35px;
+        height: 4px;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: 0.4s;
+        border-radius: 5px;
+    }
+
+    .burger-nav {        /* Details for the burger menu drop down box */
+        position: absolute;
+        right: 0em;
+        width: 120px;
+        margin-top: 0px;
+        padding: 20px;
+        justify-content: right;
+        background-color: #092a3f;
+        border-bottom-left-radius: 10px;
+        list-style: none; 
+    }
+
+    .burger-nav button {     /* Details on the burger menu navigation buttons */
+        background-color: transparent;
+        border: none;
+        font-size: 1.4rem;
+        line-height: 30px;
+    }
+}
+
+/******************/
+/* Scrollbar Info */
+/******************/
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 20px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #0c354e;
+    border-bottom-left-radius: 20px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #47a1bb;
+}

@@ -1,0 +1,45 @@
+<!-- Make a class for the <a> element so the "active" class can actually work in the css -->
+<link href="css/navbar.css" rel="stylesheet" type="text/css">
+<nav class="navbar">
+
+    <a href="index.php"><img src="assets/logo.png" alt="logo" class="logo"></a>
+
+    <!-- List of middle section of links -->
+    <div class="navLinks">
+        <button id="index.php" type="button" class="nav-item">Home</button>
+        <button id="allPets.php" type="button" class="nav-item">All Pets</button>
+        <button id="dogs.php" type="button" class="nav-item">Dogs</button>
+        <button id="cats.php" type="button" class="nav-item">Cats</button>
+        <button id="calculator.html" type="button" class="nav-item">Calculator</button>
+    </div>
+
+    <!-- Person icon for drop down box -->
+    <button type="button" id="person-Btn" class="personClose"><img src="assets/person.png" alt="person"
+            class="person-icon"></button>
+
+    <!-- Burger menu for drop down box when screen is shrinked -->
+    <button id="burger-btn" class="burgerClose" hidden>
+        <div class="burger-menu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </button>
+</nav>
+
+<!-- Drop down menu for when person icon is clicked -->
+<div style="display: none" id="person-nav" class="person-nav">
+    <button id="acc" type="submit" class="nav-item" name="myacc">Account</button>
+    <button id="savedpets.php" type="button" class="nav-item">Saved</button>
+    <button id="feedback.html" type="button" class="nav-item">Feedback</button>
+</div>
+
+<!-- Drop down menu for when burger menu is clicked -->
+<div style="display: none" id="burger-nav" class="burger-nav">
+    <button id="index.php" type="button" class="nav-item">Home</button>
+    <button id="allPets.php" type="button" class="nav-item">All Pets</button>
+    <button id="calculator.html" type="button" class="nav-item">Calculator</button>
+    <button id="acc" type="submit" class="nav-item" name="myacc">Account</button>
+    <button id="savedpets.php" type="button" class="nav-item">Saved</button>
+    <button id="feedback.html" type="button" class="nav-item">Feedback</button>
+</div>

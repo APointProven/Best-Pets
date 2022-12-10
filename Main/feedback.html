@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Best Pets - Feedback</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <my-header id=nav-ph w3-include-html='navbar.html'></my-header>
+    <script type="module" src="javascript/navbar.js"></script>
+
+    <!-- Insert for confirmation/error messages to be displayed through js -->
+    <div class="confirm-box">
+        <p id="confirm-msg" class="confirm-message"></p>
+    </div>
+
+    <!-- Feedback form box -->
+    <div class="feedback-form">
+        <h1>Feedback</h1>
+        <form id="feedback" class="input-group">
+            <h3 class="input1Header">Name:</h3>
+            <input type="text" id="name" name="name" class="input1" placeholder="Enter your name" required>
+            <h3 class="input1Header">Email:</h3>
+            <input type="email" id="email" name="email" class="input1" placeholder="Enter your email" required>
+            <h3 class="input1Header">Feedback:</h3>
+            <textarea id="feedback-text" class="input1" name="content" placeholder="How was your experience?"
+                required></textarea>
+            <button type="submit" id="feedback-btn" class="feedback-btn">Submit</button>
+        </form>
+    </div>
+    <script type="module" src="javascript/feedback.js"></script>
+</body>
+
+</html>

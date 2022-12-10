@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Best Pets - Calculator</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <my-header id=nav-ph w3-include-html='navbar.html'></my-header>
+    <script type="module" src="javascript/navbar.js"></script>
+
+    <!-- Calculator header and description -->
+    <div class="calc-desc">
+        <h1>Pet Cost Calculator</h1>
+        <p>This calculator is designed to provide an estimate on how much it would cost to care for
+            a companion pet. It takes into account the breed size and current age, as well as factors
+            that revolve around your circumstances. Please note, these may not be accurate as
+            unexpected expenses do occur sometimes.
+        </p>
+    </div>
+
+    <!-- Calculator form box -->
+    <div class="calc-box">
+        <!-- Dogs/Cats header button -->
+        <div class="calc-btn-box">
+            <div id="btn"></div>
+            <button type="button" class="calc-toggle-btn" onclick="dogs()">Dogs</button>
+            <button type="button" class="calc-toggle-btn" onclick="cats()">Cats</button>
+        </div>
+
+        <!-- Dogs calculator form -->
+        <form id="dogs" class="input-group">
+            <h3>Breed Size</h3>
+            <select id="d-breed" name="breed" class="input-field" required>
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="1">X-Small</option>
+                <option value="1.1">Small</option>
+                <option value="1.2">Medium</option>
+                <option value="1.3">Large</option>
+                <option value="1.4">X-Large</option>
+            </select>
+
+            <h3>Age</h3>
+            <select id="d-age" name="age" class="input-field" required>
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="20">0-2 years</option>
+                <option value="0">3-7 years</option>
+                <option value="25">8+ years</option>
+            </select>
+
+            <h3>Weight</h3>
+            <input type="number" class="input-field" placeholder="Enter the weight">
+
+            <h3>Flea and Tick Preventative</h3>
+            <select id="d-preventative" name="preventative" class="input-field" required>
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="15">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <h3>Food Quality</h3>
+            <select id="d-food" name="food" class="input-field" required>
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="10">Lower Tier</option>
+                <option value="18">Middle Tier</option>
+                <option value="25">High Tier</option>
+            </select>
+
+            <h3>Medical Issues</h3>
+            <select id="d-medical" name="medical" class="input-field" required>
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="40">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <h3>Apartment Pet Rent</h3>
+            <select id="d-rent" name="rent" class="input-field" required>
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="25">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <button type="submit" class="submit-btn">Calculate</button>
+            <button type="reset" class="reset-btn">Reset</button>
+        </form>
+
+        <!-- Cats calculator form -->
+        <form id="cats" class="input-group">
+            <h3>Age</h3>
+            <select id="c-age" name="age" class="input-field" required>
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="15">0-3 years</option>
+                <option value="5">4-12 years</option>
+                <option value="20">13+ years</option>
+            </select>
+
+            <h3>Weight</h3>
+            <input type="number" class="input-field" placeholder="Enter the weight">
+
+            <h3>Flea and Tick Preventative</h3>
+            <select id="c-preventative" name="preventative" class="input-field" required>
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="15">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <h3>Food Quality</h3>
+            <select id="c-food" name="food" class="input-field" required>
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="10">Lower Tier</option>
+                <option value="18">Middle Tier</option>
+                <option value="25">High Tier</option>
+            </select>
+
+            <h3>Medical Issues</h3>
+            <select id="c-medical" name="medical" class="input-field" required>
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="40">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <h3>Apartment Pet Rent</h3>
+            <select id="c-rent" name="rent" class="input-field" required>
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="25">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <button type="submit" class="submit-btn">Calculate</button>
+            <button type="reset" class="reset-btn">Reset</button>
+        </form>
+    </div>
+
+    <!-- Insert for error messages to be displayed through js -->
+    <div class="calc-error-box">
+        <p id="calc-error-msg" class="calc-error-msg"></p>
+    </div>
+
+    <!-- Estimated Results Section -->
+    <div class="calc-answers">
+        <h1>Estimated Results</h1>
+
+        <h3>Monthly estimated total:</h3>
+        <h4 id="m-results">$0.00</h4>
+        <p>This includes food, flea/tick control, apartment pet rent, equipment, and toys.</p>
+
+        <h3>Annual estimated total:</h3>
+        <h4 id="a-results">$0.00</h4>
+        <p>This includes food, flea/tick control, apartment pet rent, equipment, toys, vaccines, and miscellaneous
+            expenses that may pop up.</p>
+    </div>
+
+    <!-- Script to change out the dogs/cats forms -->
+    <script>
+        var x = document.getElementById("dogs");
+        var y = document.getElementById("cats");
+        var z = document.getElementById("btn");
+        let catvars = ['-450px', '50px', '110px'];
+        let dogvars = ['50px', '550px', '0px'];
+
+        function window_function(x) {
+            if (x.matches) {
+                catvars = ['-450px', '50px', '110px']
+                dogvars = ['50px', '550px', '0px']
+            } else {
+                catvars = ['-800px', '125px', '110px']
+                dogvars = ['125px', '800px', '0px']
+            }
+        }
+        var mediamatch = window.matchMedia("(max-width: 1000px)")
+        window_function(mediamatch)
+        mediamatch.addListener(window_function)
+
+        function cats() {
+            x.style.left = catvars[0];
+            y.style.left = catvars[1];
+            z.style.left = catvars[2];
+        }
+
+        function dogs() {
+            x.style.left = dogvars[0];
+            y.style.left = dogvars[1];
+            z.style.left = dogvars[2];
+        }
+    </script>
+
+    <script type="module" src="javascript/calculator.js"></script>
+</body>
+
+</html>
